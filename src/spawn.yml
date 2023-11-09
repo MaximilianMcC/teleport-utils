@@ -1,0 +1,15 @@
+# Teleport Utils spawn config
+
+# You can edit these values manually, or use the /setspawn command
+# in game or using the server console to change them.
+
+# When done in game, the values are 'cleaned up'. For example, and X of 34.86 will become 34
+# And a yaw of 159 will become 180
+
+
+# Values
+x:
+y:
+z:
+yaw:
+pitch:
