@@ -4,3 +4,5 @@ description: Adds /spawn, /home, and /tpa
 main: net.maxtheminerboy.Main
 api-version: '1.20'
 commands:
+  setspawn:
+  spawn:
