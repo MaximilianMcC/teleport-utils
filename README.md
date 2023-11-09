@@ -1,5 +1,9 @@
 # Teleport Utils
-![Minecraft Server Version](https://img.shields.io/badge/Minecraft%20Version-1.20.1-yellow?style=for-the-badge)
+![Minecraft Server Version](https://img.shields.io/badge/Minecraft%20Version-1.20.1-36b32d?style=for-the-badge)
+
+![Bukkit](https://img.shields.io/badge/Bukkit-0c64ae?style=for-the-badge)
+![Spigot](https://img.shields.io/badge/Spigot-ef9228?style=for-the-badge)
+![Paper](https://img.shields.io/badge/Paper-181a1b?style=for-the-badge)
 
 ---
 
