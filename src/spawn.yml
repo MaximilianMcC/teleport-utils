@@ -3,9 +3,14 @@
 # You can edit these values manually, or use the /setspawn command
 # in game or using the server console to change them.
 
-# When done in game, the values are 'cleaned up'. For example, and X of 34.86 will become 34
-# And a yaw of 159 will become 180
+# When done in game, the values are 'cleaned up'. Examples below:
+# X of 34.86 will become 34
+# Yaw of 153 will become 180
+# Pitch will always be 0
 
+# You can always manualy edit the values in this yml file to use
+# whatever position you want. Values are only corrected when done
+# using the command by a player in game
 
 # Values
 x:

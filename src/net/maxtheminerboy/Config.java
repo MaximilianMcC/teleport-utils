@@ -1,55 +1,53 @@
 package net.maxtheminerboy;
 
 import java.io.File;
-import java.io.IOException;
 
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.yaml.snakeyaml.Yaml;
 
 public class Config {
 	
-	private static Main main = Main.getInstance();
+	// Get the main instance to get plugin info
+	private static Main plugin = Main.getInstance();
 
-	// Spawn related config files
-	private static FileConfiguration spawnConfig;
 
-	// Create missing config files
-	public static void createConfigs()
-	{
-		createSpawnConfig();
+	// Make all of the required configs
+	public static void createConfigs() {
+
+		// Load all of the config files
+		FileConfiguration config = loadConfigFile("config.yml");
+		FileConfiguration spawn = loadConfigFile("spawn.yml");
+		FileConfiguration homes = loadConfigFile("homes.yml");
+		FileConfiguration tpa = loadConfigFile("tpa.yml");
+
+		
 	}
+	
+	
+	private static FileConfiguration loadConfigFile(String fileName) {
 
-	private static void createSpawnConfig()
-	{
-		// Make a new config file
-		spawnConfig = createConfig("spawn.yml");
-	}
+		// Get the config
+		File configFile = new File(plugin.getDataFolder(), fileName);
+		if (!configFile.exists()) {
 
-
-	// Create a config file if it doesn't exist
-	private static FileConfiguration createConfig(String configFileName)
-	{
-		// Create a new file
-		File configFile = new File(main.getDataFolder(), configFileName);
-		if (!configFile.exists())
-		{
+			// Make the file if it doesn't already exist
 			configFile.getParentFile().mkdirs();
-			main.saveResource(configFileName, false);
+			plugin.saveResource(fileName, false);
+			plugin.getLogger().info("Created " + fileName);
 		}
 
-		// Load the config
-		YamlConfiguration config = new YamlConfiguration();
+		// Parse the config file
+		FileConfiguration config = new YamlConfiguration();
 		try {
 			config.load(configFile);
 			return config;
 
 		} catch (Exception e) {
-			main.getLogger().warning("Error while getting config info from" + configFileName);
-		}
 
-		return null;
+			plugin.getLogger().warning("Error while parsing " + fileName);
+			return null;
+		}
 	}
+
 
 }

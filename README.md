@@ -31,7 +31,7 @@ Minecraft plugin that adds `/spawn`, `/home`, and `/tpa` commands to your server
 | `/delhome <home name>` | Remove one of the players named homes | `/delhome farm` | ❌ |
 | `/homehelp` | Shows a list of home related commands | `/homehelp` | ❌ |
 
-# TPA commands
+## TPA commands
 | Command Name                  | Function                               | Example     | Implemented |
 |-------------------------------|----------------------------------------|-------------|-------------|
 | `/tpa <player>` | Ask if you can teleport to the player | `/tpa steve` | ❌ |
